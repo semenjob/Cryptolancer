@@ -1,0 +1,15 @@
+@mixin for-mobile-375 {
+    @media (min-width: 375px) {
+        @content;
+    }
+}
+@mixin for-tablet-768 {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin for-tablet-998 {
+    @media (min-width: 998px) {
+        @content;
+    }
+}

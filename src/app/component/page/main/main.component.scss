@@ -1,0 +1,88 @@
+@import '/src/style/mixin';
+
+@include for-mobile-375{
+    section {
+        position: relative;
+        .mainContent {
+            padding: 20px 20px;
+        }
+        .mainImg {
+            display: none;
+        }
+        h1 {
+            width: 300px;
+            text-align: left;
+            font-size: 52px;
+            line-height: 52px;
+            color: var(--main-color);
+        }
+        h3 {
+            width: 350px;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 500;
+            color: #5e6d55;
+        }
+        .mainBtn {
+            width: 300px;
+            margin-top: 40px;
+            display: flex;
+        }
+        h5 {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #9aaa97;
+        }
+        .partner {
+            width: 370px;
+            display: flex;
+            flex-wrap: wrap;
+            svg {
+                display: block;
+                margin: 0 7px;
+                margin-top: 10px;
+            }
+        }
+        .talents {
+            h3 {
+                font-size: 42px;
+                line-height: 42px;
+                color: var(--black-color);
+            }
+            h5 {
+                font-size: 16px;
+                a {
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: var(--main-color);
+                }
+           
+            }
+        }
+    }
+}
+@include for-tablet-768 {
+    .mainContent {
+        .mainImg {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            display: block;
+            z-index: -10;
+            img {
+                width: 350px;
+                height: 350px;
+            }
+        }
+        .mainBtn {
+            width: 370px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .cardsContent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

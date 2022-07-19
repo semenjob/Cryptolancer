@@ -1,0 +1,60 @@
+@import '/src/style/mixin';
+
+
+@include for-mobile-375 {
+    section {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 40px;
+        .logo {
+            height: 40px;
+            :hover {
+                color: var(--main-color);
+            }
+            a {
+                line-height: 40px;
+                font-size: 20px;
+                text-decoration: none;
+                color: var(--black-color);
+            }
+        }
+        .menu {
+            button {
+                background: var(--black-color);
+            }
+        }
+    }
+    .menuLink{
+        display: none;
+    }
+}
+@include for-tablet-768 {
+    .menu {
+        display: none;
+    }
+    .menuLink {
+        display: block;
+        width: 500px;
+        line-height: 40px;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0 10px;
+                list-style: none;
+                :hover {
+                    color: var(--main-color);
+                }
+                a {
+                    line-height: 40px;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: var(--black-color);
+                }
+            }
+        }
+    }
+}
+

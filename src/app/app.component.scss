@@ -1,0 +1,7 @@
+@import '/src/style/variables';
+
+:host{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}

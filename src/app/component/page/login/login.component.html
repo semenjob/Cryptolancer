@@ -1,0 +1,28 @@
+<section>
+    <a routerLink="" href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mdwcGsXRTZ9W_UNBSgQD8vz--I9Ex_4dCA&usqp=CAU" alt=""></a>
+    <hr>
+    <div class="choice">
+      <div class="wrapper">
+        <div class="choice_title">Join as a client or freelancer</div>
+        <div class="card">
+          <label for="worker">
+            <input class="radio" type="radio" id="worker" name="radioBtn" (change)="ClickEvent($event)" value="Registration as a worker">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mdwcGsXRTZ9W_UNBSgQD8vz--I9Ex_4dCA&usqp=CAU" alt="">
+            <div class="descr">i'm client,hiring for a project</div>
+          </label>
+        </div>
+        <div class="card">
+          <label for="employer">
+            <input class="radio" type="radio" id="employer" name ="radioBtn" (change)="ClickEvent($event)" value="Registration as a employer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mdwcGsXRTZ9W_UNBSgQD8vz--I9Ex_4dCA&usqp=CAU" alt="">
+            <div class="descr">i'm freelancer,looking for work</div>
+          </label>
+        </div>
+        <!-- <div  class="btn" (click)="ConsoleLog()">
+            <app-btn></app-btn>
+        </div> -->
+        <button class="btn" (click)="ConsoleLog()" [disabled]="EnebleRegist">registration</button>
+        <div class="log_in ">Already have an account? <span><a routerLink="login">Log In</a></span></div>
+      </div>
+    </div>
+</section>

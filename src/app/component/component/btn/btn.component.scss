@@ -1,0 +1,22 @@
+@import '/src/style/mixin';
+
+@include for-mobile-375 {
+  button {
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--main-color);
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+  }
+  button:hover{
+    color: var(--black-color);
+    background-color: var(--main-color);
+    transition: 1s;
+  }
+}
+@include for-tablet-768 {
+  button {
+    width: 150px;
+  }
+}
