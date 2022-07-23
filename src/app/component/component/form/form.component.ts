@@ -8,43 +8,32 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class FormComponent implements OnInit {
   hide = true;
-  LogIn = new FormControl('');
-  SignIn = new FormControl ('');
-  Email = new FormControl('');
-  Password = new FormControl('');
+  logIn = new FormControl('');
+  signIn = new FormControl ('');
+  email = new FormControl('');
+  password = new FormControl('');
   
-  RegisterForm!: FormGroup;
+  registerForm!: FormGroup;
 
-  getErrorMessage() {
-    if (this.LogIn.hasError('required')) {
-      return 'You must enter a value';
-    } 
-    if (this.SignIn.hasError('required')) {
-      return 'You must enter a value';
-    } 
-    if (this.Email.hasError('required')) {
-      return 'You must enter a value';
-    } 
-    if (this.Password.hasError('required')) {
-      return 'You must enter a value';
-    } 
-    return  'Not a valid ';
-  }
-
+ 
   SaveForm() {
-    if (this.RegisterForm.status == 'INVALID') {
-      alert('Не верно заполненна форма')
+    if (this.registerForm.status == 'VALID') {
+        
     }
-    console.log(JSON.stringify(this.RegisterForm.value))
+    
+    console.log(JSON.stringify(this.registerForm.value))
   }
 
   
   ngOnInit(): void {
-  this.RegisterForm = new FormGroup({
-    LogIn: new FormControl(" ", [Validators.required, Validators.minLength(5)]),
-    SignIn: new FormControl(" ", [Validators.required, Validators.minLength(5)]),
-    Email: new FormControl(" ", [Validators.required, Validators.email]),
-    Password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
+  this.registerForm = new FormGroup({
+    logIn: new FormControl(" ", [Validators.required, Validators.minLength(5),]),
+    signIn: new FormControl(" ", [Validators.required, Validators.minLength(5)]),
+    email: new FormControl(" ", [Validators.required, Validators.email]),
+    password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
   })
+  }
+  onSubmit() {
+
   }
 }

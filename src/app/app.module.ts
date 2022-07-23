@@ -8,7 +8,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { FormComponent } from './component/component/form/form.component';
     FormComponent,
   ],
   imports: [
+    FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatChipsModule,
