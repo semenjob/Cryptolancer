@@ -17,20 +17,16 @@ export class FormComponent implements OnInit {
 
  
   SaveForm() {
-    if (this.registerForm.status == 'VALID') {
-        
-    }
-    
-    console.log(JSON.stringify(this.registerForm.value))
+    console.log(JSON.stringify(this.registerForm.value));
   }
 
   
   ngOnInit(): void {
   this.registerForm = new FormGroup({
-    logIn: new FormControl(" ", [Validators.required, Validators.minLength(5),]),
-    signIn: new FormControl(" ", [Validators.required, Validators.minLength(5)]),
-    email: new FormControl(" ", [Validators.required, Validators.email]),
-    password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
+    logIn: new FormControl("", [Validators.required, Validators.minLength(5),]),
+    signIn: new FormControl("", [Validators.required, Validators.minLength(5)]),
+    email: new FormControl("", [Validators.required, Validators.email]),
+    password: new FormControl("", [Validators.required, Validators.minLength(5)])
   })
   }
   onSubmit() {

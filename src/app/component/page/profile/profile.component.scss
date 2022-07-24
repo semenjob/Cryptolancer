@@ -1,0 +1,49 @@
+section {
+    background: #dadada;
+    text-align: center;
+    padding: 20px 0;
+    .register {
+        text-align: start;
+        margin-left: 130px;
+    }
+   .setting {
+    margin-top: 10px;
+    justify-content: center;
+    display: grid;
+    grid-template: 400px 400px / 450px 450px;
+    gap: 30px;
+    .cardsSetting {
+        padding: 15px;
+        background: #fff;
+        text-align: start;
+        border-radius: 5px;
+        .title {
+            text-align: center;
+        }
+        .subtitle {
+            margin-top: 25px;
+        }
+        textarea {
+            padding: 5px;
+            margin: 10px auto;
+            display: block;
+            width: 390px;
+            resize: none
+        }
+        mat-form-field{
+            margin-top: 10px;
+            display: block;
+            width: 200px;
+            }
+            mat-radio-button {
+                justify-content: start;
+                margin-right: 10px;
+            }
+            mat-radio-group {
+                margin-top: 10px;
+                display: block;
+                width: 155px;
+            }
+        }
+    }
+}

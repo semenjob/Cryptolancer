@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./btn.component.scss']
 })
 export class BtnComponent implements OnInit {
+  text = 'Log-in'
 
   constructor() { }
 

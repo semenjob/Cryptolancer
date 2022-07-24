@@ -1,35 +1,37 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="example-container">
+<section>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Log in</mat-label>
+                <input formControlName ="logIn" matInput required>
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Sign in</mat-label>
+                <input formControlName ="signIn" matInput required>
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input formControlName ="email" matInput placeholder="pat@example.com"  required>
+                <span *ngIf="registerForm.get('email')"></span>
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="example-container">
         <mat-form-field appearance="fill">
-            <mat-label>Log in</mat-label>
-            <input formControlName ="logIn" matInput required>
+            <mat-label>Enter your password</mat-label>
+            <input formControlName ="password" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
         </mat-form-field>
-    </div>
-    <br>
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Sign in</mat-label>
-            <input formControlName ="signIn" matInput required>
-        </mat-form-field>
-    </div>
-    <br>
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Enter your email</mat-label>
-            <input formControlName ="email" matInput placeholder="pat@example.com"  required>
-            <span *ngIf="registerForm.get('email')"></span>
-        </mat-form-field>
-    </div>
-    <br>
-    <div class="example-container">
-    <mat-form-field appearance="fill">
-        <mat-label>Enter your password</mat-label>
-        <input formControlName ="password" matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    </div>
-    <br>
-    <button [disabled]="registerForm.invalid" type="submit" (click) = "SaveForm()" mat-button color="primary">Primary</button>
-</form>
+        </div>
+        <br>
+        <button routerLink="profile" [disabled]="registerForm.invalid" type="submit" (click) = "SaveForm()" mat-button color="warn">Register</button>
+    </form>
+</section>
